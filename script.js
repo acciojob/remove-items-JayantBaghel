@@ -1,13 +1,13 @@
-document.getElementById('removeButton').addEventListener('click', function() {
-    const colorSelect = document.getElementById('colorSelect');
-    const selectedOptionIndex = colorSelect.selectedIndex;
-
-    console.log('Selected index:', selectedOptionIndex);
-    console.log('Options before removal:', Array.from(colorSelect.options).map(opt => opt.value));
-
-    if (selectedOptionIndex !== -1) {
-        colorSelect.remove(selectedOptionIndex);
+function removeColor() {
+    // Get the select element by its ID
+    var select = document.getElementById("colorSelect");
+    
+    // Get the selected option's index
+    var selectedIndex = select.selectedIndex;
+    
+    // Check if there is a selected option (index is not -1)
+    if (selectedIndex !== -1) {
+        // Remove the selected option from the select element
+        select.remove(selectedIndex);
     }
-
-    console.log('Options after removal:', Array.from(colorSelect.options).map(opt => opt.value));
-});
+}
